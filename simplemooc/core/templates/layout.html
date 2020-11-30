@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+
+{% load static %}
+	<head>
+		<title>Curso - Django</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Logo -->
+									<h1><a href="{% url 'home' %}" id="logo">Curso Django</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="{% url 'home' %}">Home</a>
+										<a href="{% url 'contato' %}">Contato</a>
+									</nav>
+
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+				<section id="content">
+                    {% block content %}{% endblock content %}
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+
+
+							</div>
+							<div class="col-4 col-12-medium imp-medium">
+
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Copyright -->
+				<div id="copyright">
+					&copy; Untitled. All rights reserved. | Design: <a href=""></a>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'core//js/jquery.min.js' %}"></script>
+			<script src="{% static 'core//js/browser.min.js' %}"></script>
+			<script src="{% static 'core//js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'core//js/util.js' %}"></script>
+			<script src="{% static 'core//js/main.js' %}"></script>
+
+	</body>
+</html>
